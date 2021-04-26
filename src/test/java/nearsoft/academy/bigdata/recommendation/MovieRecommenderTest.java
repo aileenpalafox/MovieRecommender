@@ -1,5 +1,6 @@
 package nearsoft.academy.bigdata.recommendation;
 
+import movie.recommender.extract;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.junit.Test;
 
@@ -11,7 +12,9 @@ import static org.junit.matchers.JUnitMatchers.hasItem;
 
 //importar clase con el codigo funcional, es necesario tenerla dentro de un package para que Maven la detecte
 import movie.recommender.MovieRecommender;
-import movie.recommender.extract;
+import movie.recommender.ToCSV;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 
 public class MovieRecommenderTest {
     @Test
@@ -20,10 +23,13 @@ public class MovieRecommenderTest {
         //    http://snap.stanford.edu/data/web-Movies.html
 
         //MovieRecommender recommender = new MovieRecommender("/Users/aileen.palafox/Documents/movies.txt.gz");
-        MovieRecommender recommender = new MovieRecommender("/Users/aileen.palafox/Documents/academy-exercises/src/main/resources/moviestest2.txt.gz");
-        assertEquals(7911684, recommender.getTotalReviews());
-        assertEquals(253059, recommender.getTotalProducts());
-        assertEquals(889176, recommender.getTotalUsers());
+        //MovieRecommender recommender = new MovieRecommender("/Users/aileen.palafox/Documents/academy-exercises/src/main/resources/moviestest2.txt.gz");
+        //assertEquals(7911684, recommender.getTotalReviews());
+        //assertEquals(253059, recommender.getTotalProducts());
+        //assertEquals(889176, recommender.getTotalUsers());
+
+        ToCSV tocsv = new ToCSV("/Users/aileen.palafox/Documents/academy-exercises/src/main/resources/moviestest2.txt.gz");
+        //extract extractMovies = new extract("/Users/aileen.palafox/Documents/movies.txt.gz");
 
         //List<String> recommendations = recommender.getRecommendationsForUser("A141HP4LYPWMSR"); //usar mahout
         //assertThat(recommendations, hasItem("B0002O7Y8U")); //dejar comentado

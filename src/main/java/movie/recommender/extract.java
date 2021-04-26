@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.zip.GZIPInputStream;
 
 public class extract {
+
     private int totalReviews = 0; //privat evita que se acceda a ellsa de otras partes
 
     public extract(String path) throws IOException {
@@ -13,9 +14,9 @@ public class extract {
 
         String readingLine;
         //number of reviews to read and write
-        int p=50000;
+        int p=3;
 
-        FileWriter myWriter = new FileWriter("/Users/aileen.palafox/Documents/academy-exercises/src/main/java/movie/recommender/moviestest2.txt");
+        FileWriter myWriter = new FileWriter("/Users/aileen.palafox/Documents/moviestest.txt");
 
         while (p!=0){
             readingLine=buffered.readLine();
