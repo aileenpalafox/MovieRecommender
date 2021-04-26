@@ -14,9 +14,9 @@ public class extract {
 
         String readingLine;
         //number of reviews to read and write
-        int p=3;
+        int p=50000;
 
-        FileWriter myWriter = new FileWriter("/Users/aileen.palafox/Documents/moviestest.txt");
+        FileWriter myWriter = new FileWriter("/Users/aileen.palafox/Documents/academy-exercises/src/main/resources/moviestest2.txt");
 
         while (p!=0){
             readingLine=buffered.readLine();
